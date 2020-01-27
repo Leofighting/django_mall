@@ -18,6 +18,7 @@ You could switch to source code mode temporary from menu bar, footer bar or shor
 
 ## 整体框架
 
+### 考虑到图片因网速无法显示，可点击链接查看：https://mubu.com/doc/apClDHUPL0
 ![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/Django-%E7%A7%AF%E5%88%86%E5%95%86%E5%9F%8E.png)
 
 ## 功能页面展示

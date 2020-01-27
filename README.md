@@ -1,10 +1,6 @@
 # Django-积分商城
 
-[![](https://img.shields.io/badge/Python-3.7-blue.svg)](https://twitter.com/EyreFree777)[![](https://img.shields.io/badge/Django-1.11-blue.svg)](https://twitter.com/EyreFree777)
-
 基于 Django 框架搭建的积分商城实战项目。包括用户登陆、注册（包含验证码），浏览、查看商品、加入购物车等功能，同时可进行积分支付以及查看订单信息的一个平台。
-
-[TOC]
 
 ## 技术栈说明
 

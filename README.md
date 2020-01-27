@@ -40,7 +40,7 @@ You could switch to source code mode temporary from menu bar, footer bar or shor
 
 - 商品详情--加入购物车--结算支付
 
-![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/5.png)
+![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/5.gif)
 
 
 

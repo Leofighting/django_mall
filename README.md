@@ -18,29 +18,29 @@ You could switch to source code mode temporary from menu bar, footer bar or shor
 
 ## 整体框架
 
-![Django-积分商城](C:\Users\xiaoj\Desktop\Django-积分商城.png)
+![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/Django-%E7%A7%AF%E5%88%86%E5%95%86%E5%9F%8E.png)
 
 ## 功能页面展示
 
 - 首页--登陆--注册
 
-![image-20200127161020699](C:\Users\xiaoj\AppData\Roaming\Typora\typora-user-images\image-20200127161020699.png)
+![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/1.png)
 
 - 分类
 
-![image-20200127152823417](C:\Users\xiaoj\AppData\Roaming\Typora\typora-user-images\image-20200127152823417.png)
+![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/2.png)
 
 - 购物车
 
-![image-20200127155520943](C:\Users\xiaoj\AppData\Roaming\Typora\typora-user-images\image-20200127155520943.png)
+![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/3.png)
 
 - 个人中心
 
-![image-20200127155556569](C:\Users\xiaoj\AppData\Roaming\Typora\typora-user-images\image-20200127155556569.png)
+![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/4.png)
 
 - 商品详情--加入购物车--结算支付
 
-![image-20200127155834658](C:\Users\xiaoj\AppData\Roaming\Typora\typora-user-images\image-20200127155834658.png)
+![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/5.png)
 
 
 

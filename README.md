@@ -22,6 +22,7 @@ You could switch to source code mode temporary from menu bar, footer bar or shor
 
 ## 功能页面展示
 
+### 考虑到图片因网速无法显示，可点击链接查看：https://mubu.com/doc/i9zI_7Kmz0
 - 首页--登陆--注册
 
 ![image](https://github.com/Leofighting/django_mall/blob/master/readme_images/1.png)

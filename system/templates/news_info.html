@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>新闻详情</title>
+{% endblock %}
+
+{% block container %}
+    <!--主体-->
+    <header class="wy-header">
+      <div class="wy-header-icon-back"><span></span></div>
+      <div class="wy-header-title">新闻详情</div>
+    </header>
+    <div class="weui-content">
+      <article class="weui-article">
+        <h1>{{ news_obj.title }}</h1>
+        <h3 class="wy-news-time">{{ news_obj.created_at|date }}     浏览次数：{{ news_obj.view_count }}</h3>
+        <section class="wy-news-info">
+          <p>
+            {{ news_obj.content }}
+          </p>
+          <p>
+            <img src="upload/ban1.jpg" alt="" />
+            <img src="upload/ban2.jpg" alt="" />
+          </p>
+        </section>
+      </article>
+    </div>
+{% endblock %}

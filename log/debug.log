@@ -1,0 +1,1595 @@
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.005) SHOW FULL TABLES; args=None
+(0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.003) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'i9pxap46l5a3u660z3ezp0zg7grs28ec' AND `django_session`.`expire_date` > '2020-01-12 06:38:58.644804'); args=('i9pxap46l5a3u660z3ezp0zg7grs28ec', '2020-01-12 06:38:58.644804')
+(0.003) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`id` = 2; args=(2,)
+(0.003) SELECT SUM(`mine_cart`.`amount`) AS `sum_amount`, SUM(`mine_cart`.`count`) AS `sum_count` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+(0.001) SELECT COUNT(*) AS `__count` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+(0.001) SELECT `system_slider`.`id`, `system_slider`.`name`, `system_slider`.`desc`, `system_slider`.`types`, `system_slider`.`img`, `system_slider`.`reorder`, `system_slider`.`start_time`, `system_slider`.`end_time`, `system_slider`.`target_url`, `system_slider`.`is_valid`, `system_slider`.`created_at`, `system_slider`.`updated_at` FROM `system_slider` WHERE `system_slider`.`types` = 11 ORDER BY `system_slider`.`reorder` DESC; args=(11,)
+(0.001) SELECT `system_news`.`id`, `system_news`.`types`, `system_news`.`title`, `system_news`.`content`, `system_news`.`reorder`, `system_news`.`start_time`, `system_news`.`end_time`, `system_news`.`view_count`, `system_news`.`is_top`, `system_news`.`is_valid`, `system_news`.`created_at`, `system_news`.`updated_at` FROM `system_news` WHERE (`system_news`.`types` = 11 AND `system_news`.`is_top` = 1 AND `system_news`.`is_valid` = 1 AND `system_news`.`start_time` <= '2020-01-12 06:38:58.656804' AND `system_news`.`end_time` >= '2020-01-12 06:38:58.656804') ORDER BY `system_news`.`reorder` DESC; args=(11, True, True, '2020-01-12 06:38:58.656804', '2020-01-12 06:38:58.656804')
+(0.010) SELECT `mall_product`.`id`, `mall_product`.`uid`, `mall_product`.`name`, `mall_product`.`desc`, `mall_product`.`content`, `mall_product`.`types`, `mall_product`.`price`, `mall_product`.`origin_price`, `mall_product`.`img`, `mall_product`.`buy_link`, `mall_product`.`reorder`, `mall_product`.`status`, `mall_product`.`sku_count`, `mall_product`.`remain_count`, `mall_product`.`view_count`, `mall_product`.`score`, `mall_product`.`is_valid`, `mall_product`.`created_at`, `mall_product`.`updated_at` FROM `mall_product` INNER JOIN `mall_product_tags` ON (`mall_product`.`id` = `mall_product_tags`.`product_id`) INNER JOIN `mall_tag` ON (`mall_product_tags`.`tag_id` = `mall_tag`.`id`) WHERE (`mall_product`.`status` = 11 AND `mall_product`.`is_valid` = 1 AND `mall_tag`.`code` = 'jxtj') ORDER BY `mall_product`.`reorder` DESC; args=(11, True, 'jxtj')
+(0.001) SELECT `mall_product`.`id`, `mall_product`.`uid`, `mall_product`.`name`, `mall_product`.`desc`, `mall_product`.`content`, `mall_product`.`types`, `mall_product`.`price`, `mall_product`.`origin_price`, `mall_product`.`img`, `mall_product`.`buy_link`, `mall_product`.`reorder`, `mall_product`.`status`, `mall_product`.`sku_count`, `mall_product`.`remain_count`, `mall_product`.`view_count`, `mall_product`.`score`, `mall_product`.`is_valid`, `mall_product`.`created_at`, `mall_product`.`updated_at` FROM `mall_product` INNER JOIN `mall_product_tags` ON (`mall_product`.`id` = `mall_product_tags`.`product_id`) INNER JOIN `mall_tag` ON (`mall_product_tags`.`tag_id` = `mall_tag`.`id`) WHERE (`mall_product`.`status` = 11 AND `mall_product`.`is_valid` = 1 AND `mall_tag`.`code` = 'jstj') ORDER BY `mall_product`.`reorder` DESC; args=(11, True, 'jstj')
+(0.001) SELECT `mall_product`.`id`, `mall_product`.`uid`, `mall_product`.`name`, `mall_product`.`desc`, `mall_product`.`content`, `mall_product`.`types`, `mall_product`.`price`, `mall_product`.`origin_price`, `mall_product`.`img`, `mall_product`.`buy_link`, `mall_product`.`reorder`, `mall_product`.`status`, `mall_product`.`sku_count`, `mall_product`.`remain_count`, `mall_product`.`view_count`, `mall_product`.`score`, `mall_product`.`is_valid`, `mall_product`.`created_at`, `mall_product`.`updated_at` FROM `mall_product` INNER JOIN `mall_product_tags` ON (`mall_product`.`id` = `mall_product_tags`.`product_id`) INNER JOIN `mall_tag` ON (`mall_product_tags`.`tag_id` = `mall_tag`.`id`) WHERE (`mall_product`.`status` = 11 AND `mall_product`.`is_valid` = 1 AND `mall_tag`.`code` = 'cnxh') ORDER BY `mall_product`.`reorder` DESC; args=(11, True, 'cnxh')
+"GET / HTTP/1.1" 200 10980
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'i9pxap46l5a3u660z3ezp0zg7grs28ec' AND `django_session`.`expire_date` > '2020-01-12 06:38:58.848260'); args=('i9pxap46l5a3u660z3ezp0zg7grs28ec', '2020-01-12 06:38:58.848260')
+"GET /medias/202001/product/%E4%BA%94%E7%B2%AE%E6%B6%B21.jpg HTTP/1.1" 304 0
+(0.007) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.003) SELECT VERSION(); args=None
+(0.032) SHOW FULL TABLES; args=None
+(0.039) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.011) SELECT `system_slider`.`id`, `system_slider`.`name`, `system_slider`.`desc`, `system_slider`.`types`, `system_slider`.`img`, `system_slider`.`reorder`, `system_slider`.`start_time`, `system_slider`.`end_time`, `system_slider`.`target_url`, `system_slider`.`is_valid`, `system_slider`.`created_at`, `system_slider`.`updated_at` FROM `system_slider` WHERE `system_slider`.`types` = 11 ORDER BY `system_slider`.`reorder` DESC; args=(11,)
+(0.005) SELECT `system_news`.`id`, `system_news`.`types`, `system_news`.`title`, `system_news`.`content`, `system_news`.`reorder`, `system_news`.`start_time`, `system_news`.`end_time`, `system_news`.`view_count`, `system_news`.`is_top`, `system_news`.`is_valid`, `system_news`.`created_at`, `system_news`.`updated_at` FROM `system_news` WHERE (`system_news`.`types` = 11 AND `system_news`.`is_top` = 1 AND `system_news`.`is_valid` = 1 AND `system_news`.`start_time` <= '2020-01-27 07:21:28.846646' AND `system_news`.`end_time` >= '2020-01-27 07:21:28.846646') ORDER BY `system_news`.`reorder` DESC; args=(11, True, True, '2020-01-27 07:21:28.846646', '2020-01-27 07:21:28.846646')
+(0.045) SELECT `mall_product`.`id`, `mall_product`.`uid`, `mall_product`.`name`, `mall_product`.`desc`, `mall_product`.`content`, `mall_product`.`types`, `mall_product`.`price`, `mall_product`.`origin_price`, `mall_product`.`img`, `mall_product`.`buy_link`, `mall_product`.`reorder`, `mall_product`.`status`, `mall_product`.`sku_count`, `mall_product`.`remain_count`, `mall_product`.`view_count`, `mall_product`.`score`, `mall_product`.`is_valid`, `mall_product`.`created_at`, `mall_product`.`updated_at` FROM `mall_product` INNER JOIN `mall_product_tags` ON (`mall_product`.`id` = `mall_product_tags`.`product_id`) INNER JOIN `mall_tag` ON (`mall_product_tags`.`tag_id` = `mall_tag`.`id`) WHERE (`mall_product`.`status` = 11 AND `mall_product`.`is_valid` = 1 AND `mall_tag`.`code` = 'jxtj') ORDER BY `mall_product`.`reorder` DESC; args=(11, True, 'jxtj')
+(0.002) SELECT `mall_product`.`id`, `mall_product`.`uid`, `mall_product`.`name`, `mall_product`.`desc`, `mall_product`.`content`, `mall_product`.`types`, `mall_product`.`price`, `mall_product`.`origin_price`, `mall_product`.`img`, `mall_product`.`buy_link`, `mall_product`.`reorder`, `mall_product`.`status`, `mall_product`.`sku_count`, `mall_product`.`remain_count`, `mall_product`.`view_count`, `mall_product`.`score`, `mall_product`.`is_valid`, `mall_product`.`created_at`, `mall_product`.`updated_at` FROM `mall_product` INNER JOIN `mall_product_tags` ON (`mall_product`.`id` = `mall_product_tags`.`product_id`) INNER JOIN `mall_tag` ON (`mall_product_tags`.`tag_id` = `mall_tag`.`id`) WHERE (`mall_product`.`status` = 11 AND `mall_product`.`is_valid` = 1 AND `mall_tag`.`code` = 'jstj') ORDER BY `mall_product`.`reorder` DESC; args=(11, True, 'jstj')
+(0.001) SELECT `mall_product`.`id`, `mall_product`.`uid`, `mall_product`.`name`, `mall_product`.`desc`, `mall_product`.`content`, `mall_product`.`types`, `mall_product`.`price`, `mall_product`.`origin_price`, `mall_product`.`img`, `mall_product`.`buy_link`, `mall_product`.`reorder`, `mall_product`.`status`, `mall_product`.`sku_count`, `mall_product`.`remain_count`, `mall_product`.`view_count`, `mall_product`.`score`, `mall_product`.`is_valid`, `mall_product`.`created_at`, `mall_product`.`updated_at` FROM `mall_product` INNER JOIN `mall_product_tags` ON (`mall_product`.`id` = `mall_product_tags`.`product_id`) INNER JOIN `mall_tag` ON (`mall_product_tags`.`tag_id` = `mall_tag`.`id`) WHERE (`mall_product`.`status` = 11 AND `mall_product`.`is_valid` = 1 AND `mall_tag`.`code` = 'cnxh') ORDER BY `mall_product`.`reorder` DESC; args=(11, True, 'cnxh')
+"GET / HTTP/1.1" 200 11015
+"GET /static/css/style.css HTTP/1.1" 200 26336
+"GET /static/lib/weui.min.css HTTP/1.1" 200 51383
+"GET /static/css/jquery-weui.css HTTP/1.1" 200 67510
+"GET /static/upload/ban1.jpg HTTP/1.1" 200 42522
+"GET /static/images/icon-link1.png HTTP/1.1" 200 4919
+"GET /static/images/icon-link2.png HTTP/1.1" 200 5016
+"GET /static/lib/fastclick.js HTTP/1.1" 200 25965
+"GET /static/images/icon-link3.png HTTP/1.1" 200 3956
+"GET /static/js/swiper.js HTTP/1.1" 200 177061
+"GET /static/js/jquery-weui.js HTTP/1.1" 200 201034
+"GET /static/lib/jquery-2.1.4.js HTTP/1.1" 200 247596
+"GET /static/images/icon-link4.png HTTP/1.1" 200 5870
+"GET /medias/201902/product/d0.jpg HTTP/1.1" 200 7432
+"GET /medias/201902/product/zhutu01.jpg HTTP/1.1" 200 65087
+"GET /medias/201902/product/e0.jpg HTTP/1.1" 200 49341
+"GET /medias/201902/product/f0.jpg HTTP/1.1" 200 35810
+"GET /medias/202001/product/%E4%BA%94%E7%B2%AE%E6%B6%B21.jpg HTTP/1.1" 200 236849
+"GET /static/images/news-icon.png HTTP/1.1" 200 1579
+"GET /static/images/icon-more.png HTTP/1.1" 200 1139
+"GET /static/images/footer02.png HTTP/1.1" 200 987
+"GET /static/images/footer03.png HTTP/1.1" 200 1912
+"GET /static/images/footer04.png HTTP/1.1" 200 2601
+"GET /static/images/footer001.png HTTP/1.1" 200 1907
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'mall.urls' from 'E:\\\\project\\\\django_mall\\\\mall\\\\urls.py'> (None:mall) ^mall/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'system.urls' from 'E:\\\\project\\\\django_mall\\\\system\\\\urls.py'> (None:system) ^sys/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from 'E:\\\\project\\\\django_mall\\\\accounts\\\\urls.py'> (None:accounts) ^accounts/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'mine.urls' from 'E:\\\\project\\\\django_mall\\\\mine\\\\urls.py'> (None:mine) ^mine/>"
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2745
+"GET /static/js/maps/swiper.jquery.js.map HTTP/1.1" 404 1697
+"GET /mall/prod/classify/ HTTP/1.1" 200 46271
+"GET /static/lib/weui.min.css HTTP/1.1" 200 51383
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/upload/pro3.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+"GET /static/css/style.css HTTP/1.1" 200 26336
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/upload/pro3.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/upload/pro3.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'system.urls' from 'E:\\\\project\\\\django_mall\\\\system\\\\urls.py'> (None:system) ^sys/>"
+"GET /static/lib/jquery-2.1.4.js HTTP/1.1" 200 247596
+"GET /static/css/jquery-weui.css HTTP/1.1" 200 67510
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/upload/pro3.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from 'E:\\\\project\\\\django_mall\\\\accounts\\\\urls.py'> (None:accounts) ^accounts/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/upload/pro3.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'mine.urls' from 'E:\\\\project\\\\django_mall\\\\mine\\\\urls.py'> (None:mine) ^mine/>"
+Not Found: /mall/prod/classify/upload/pro3.jpg
+"GET /mall/prod/classify/upload/pro3.jpg HTTP/1.1" 404 3492
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>'
+"GET /static/lib/fastclick.js HTTP/1.1" 200 25965
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'system.urls' from 'E:\\\\project\\\\django_mall\\\\system\\\\urls.py'> (None:system) ^sys/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from 'E:\\\\project\\\\django_mall\\\\accounts\\\\urls.py'> (None:accounts) ^accounts/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'mine.urls' from 'E:\\\\project\\\\django_mall\\\\mine\\\\urls.py'> (None:mine) ^mine/>"
+"GET /static/js/jquery-weui.js HTTP/1.1" 200 201034
+Not Found: /mall/prod/classify/js/jquery-weui.js
+"GET /mall/prod/classify/js/jquery-weui.js HTTP/1.1" 404 3498
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'system.urls' from 'E:\\\\project\\\\django_mall\\\\system\\\\urls.py'> (None:system) ^sys/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from 'E:\\\\project\\\\django_mall\\\\accounts\\\\urls.py'> (None:accounts) ^accounts/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'mine.urls' from 'E:\\\\project\\\\django_mall\\\\mine\\\\urls.py'> (None:mine) ^mine/>"
+Not Found: /mall/prod/classify/js/jquery-weui.js
+"GET /mall/prod/classify/js/jquery-weui.js HTTP/1.1" 404 3498
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/product_list.html'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/product_list.html'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/product_list.html'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'system.urls' from 'E:\\\\project\\\\django_mall\\\\system\\\\urls.py'> (None:system) ^sys/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/product_list.html'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from 'E:\\\\project\\\\django_mall\\\\accounts\\\\urls.py'> (None:accounts) ^accounts/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/product_list.html'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'mine.urls' from 'E:\\\\project\\\\django_mall\\\\mine\\\\urls.py'> (None:mine) ^mine/>"
+Not Found: /mall/prod/classify/product_list.html
+"GET /mall/prod/classify/product_list.html HTTP/1.1" 404 3498
+"GET /mall/prod/classify/ HTTP/1.1" 200 48143
+"GET /static/lib/weui.min.css HTTP/1.1" 200 51383
+"GET /static/css/style.css HTTP/1.1" 200 26336
+"GET /static/css/jquery-weui.css HTTP/1.1" 200 67510
+"GET /static/upload/pro3.jpg HTTP/1.1" 200 11718
+"GET /static/lib/jquery-2.1.4.js HTTP/1.1" 200 247596
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>'
+"GET /static/lib/fastclick.js HTTP/1.1" 200 25965
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'system.urls' from 'E:\\\\project\\\\django_mall\\\\system\\\\urls.py'> (None:system) ^sys/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from 'E:\\\\project\\\\django_mall\\\\accounts\\\\urls.py'> (None:accounts) ^accounts/>"
+"GET /static/js/jquery-weui.js HTTP/1.1" 200 201034
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'mine.urls' from 'E:\\\\project\\\\django_mall\\\\mine\\\\urls.py'> (None:mine) ^mine/>"
+Not Found: /mall/prod/classify/js/jquery-weui.js
+"GET /mall/prod/classify/js/jquery-weui.js HTTP/1.1" 404 3498
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'system.urls' from 'E:\\\\project\\\\django_mall\\\\system\\\\urls.py'> (None:system) ^sys/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from 'E:\\\\project\\\\django_mall\\\\accounts\\\\urls.py'> (None:accounts) ^accounts/>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\urls\resolvers.py", line 394, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <RegexURLPattern list> (xadmin:xadmin) ^xadmin/>], [<RegexURLPattern index ^$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_list ^prod/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_load_list ^prod/load/list/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_detail ^prod/detail/(?P<pk>\S+)/$>], [<RegexURLResolver <module 'mall.urls' from 'E:\\project\\django_mall\\mall\\urls.py'> (None:mall) ^mall/>, <RegexURLPattern product_classify ^prod/classify/$>], [<RegexURLResolver <module 'system.urls' from 'E:\\project\\django_mall\\system\\urls.py'> (None:system) ^sys/>], [<RegexURLResolver <module 'accounts.urls' from 'E:\\project\\django_mall\\accounts\\urls.py'> (None:accounts) ^accounts/>], [<RegexURLResolver <module 'mine.urls' from 'E:\\project\\django_mall\\mine\\urls.py'> (None:mine) ^mine/>], [<RegexURLPattern None ^medias/(?P<path>.*)$>]], 'path': 'mall/prod/classify/js/jquery-weui.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\xiaoj\Envs\django1.11\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'mine.urls' from 'E:\\\\project\\\\django_mall\\\\mine\\\\urls.py'> (None:mine) ^mine/>"
+Not Found: /mall/prod/classify/js/jquery-weui.js
+"GET /mall/prod/classify/js/jquery-weui.js HTTP/1.1" 404 3498
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `system_slider`.`id`, `system_slider`.`name`, `system_slider`.`desc`, `system_slider`.`types`, `system_slider`.`img`, `system_slider`.`reorder`, `system_slider`.`start_time`, `system_slider`.`end_time`, `system_slider`.`target_url`, `system_slider`.`is_valid`, `system_slider`.`created_at`, `system_slider`.`updated_at` FROM `system_slider` WHERE `system_slider`.`types` = 11 ORDER BY `system_slider`.`reorder` DESC; args=(11,)
+(0.001) SELECT `system_news`.`id`, `system_news`.`types`, `system_news`.`title`, `system_news`.`content`, `system_news`.`reorder`, `system_news`.`start_time`, `system_news`.`end_time`, `system_news`.`view_count`, `system_news`.`is_top`, `system_news`.`is_valid`, `system_news`.`created_at`, `system_news`.`updated_at` FROM `system_news` WHERE (`system_news`.`types` = 11 AND `system_news`.`is_top` = 1 AND `system_news`.`is_valid` = 1 AND `system_news`.`start_time` <= '2020-01-27 07:32:07.590971' AND `system_news`.`end_time` >= '2020-01-27 07:32:07.590971') ORDER BY `system_news`.`reorder` DESC; args=(11, True, True, '2020-01-27 07:32:07.590971', '2020-01-27 07:32:07.590971')
+(0.001) SELECT `mall_product`.`id`, `mall_product`.`uid`, `mall_product`.`name`, `mall_product`.`desc`, `mall_product`.`content`, `mall_product`.`types`, `mall_product`.`price`, `mall_product`.`origin_price`, `mall_product`.`img`, `mall_product`.`buy_link`, `mall_product`.`reorder`, `mall_product`.`status`, `mall_product`.`sku_count`, `mall_product`.`remain_count`, `mall_product`.`view_count`, `mall_product`.`score`, `mall_product`.`is_valid`, `mall_product`.`created_at`, `mall_product`.`updated_at` FROM `mall_product` INNER JOIN `mall_product_tags` ON (`mall_product`.`id` = `mall_product_tags`.`product_id`) INNER JOIN `mall_tag` ON (`mall_product_tags`.`tag_id` = `mall_tag`.`id`) WHERE (`mall_product`.`status` = 11 AND `mall_product`.`is_valid` = 1 AND `mall_tag`.`code` = 'jxtj') ORDER BY `mall_product`.`reorder` DESC; args=(11, True, 'jxtj')
+(0.001) SELECT `mall_product`.`id`, `mall_product`.`uid`, `mall_product`.`name`, `mall_product`.`desc`, `mall_product`.`content`, `mall_product`.`types`, `mall_product`.`price`, `mall_product`.`origin_price`, `mall_product`.`img`, `mall_product`.`buy_link`, `mall_product`.`reorder`, `mall_product`.`status`, `mall_product`.`sku_count`, `mall_product`.`remain_count`, `mall_product`.`view_count`, `mall_product`.`score`, `mall_product`.`is_valid`, `mall_product`.`created_at`, `mall_product`.`updated_at` FROM `mall_product` INNER JOIN `mall_product_tags` ON (`mall_product`.`id` = `mall_product_tags`.`product_id`) INNER JOIN `mall_tag` ON (`mall_product_tags`.`tag_id` = `mall_tag`.`id`) WHERE (`mall_product`.`status` = 11 AND `mall_product`.`is_valid` = 1 AND `mall_tag`.`code` = 'jstj') ORDER BY `mall_product`.`reorder` DESC; args=(11, True, 'jstj')
+(0.002) SELECT `mall_product`.`id`, `mall_product`.`uid`, `mall_product`.`name`, `mall_product`.`desc`, `mall_product`.`content`, `mall_product`.`types`, `mall_product`.`price`, `mall_product`.`origin_price`, `mall_product`.`img`, `mall_product`.`buy_link`, `mall_product`.`reorder`, `mall_product`.`status`, `mall_product`.`sku_count`, `mall_product`.`remain_count`, `mall_product`.`view_count`, `mall_product`.`score`, `mall_product`.`is_valid`, `mall_product`.`created_at`, `mall_product`.`updated_at` FROM `mall_product` INNER JOIN `mall_product_tags` ON (`mall_product`.`id` = `mall_product_tags`.`product_id`) INNER JOIN `mall_tag` ON (`mall_product_tags`.`tag_id` = `mall_tag`.`id`) WHERE (`mall_product`.`status` = 11 AND `mall_product`.`is_valid` = 1 AND `mall_tag`.`code` = 'cnxh') ORDER BY `mall_product`.`reorder` DESC; args=(11, True, 'cnxh')
+"GET / HTTP/1.1" 200 11015
+"GET /static/lib/weui.min.css HTTP/1.1" 200 51383
+"GET /static/css/style.css HTTP/1.1" 200 26336
+"GET /static/css/jquery-weui.css HTTP/1.1" 200 67510
+"GET /static/upload/ban1.jpg HTTP/1.1" 200 42522
+"GET /static/images/icon-link1.png HTTP/1.1" 200 4919
+"GET /static/lib/fastclick.js HTTP/1.1" 200 25965
+"GET /static/images/icon-link3.png HTTP/1.1" 200 3956
+"GET /static/images/icon-link2.png HTTP/1.1" 200 5016
+"GET /static/lib/jquery-2.1.4.js HTTP/1.1" 200 247596
+"GET /static/js/jquery-weui.js HTTP/1.1" 200 201034
+"GET /static/js/swiper.js HTTP/1.1" 200 177061
+"GET /static/images/icon-link4.png HTTP/1.1" 200 5870
+"GET /medias/201902/product/d0.jpg HTTP/1.1" 200 7432
+"GET /medias/201902/product/zhutu01.jpg HTTP/1.1" 200 65087
+"GET /medias/201902/product/e0.jpg HTTP/1.1" 200 49341
+"GET /medias/201902/product/f0.jpg HTTP/1.1" 200 35810
+"GET /medias/202001/product/%E4%BA%94%E7%B2%AE%E6%B6%B21.jpg HTTP/1.1" 200 236849
+"GET /static/images/news-icon.png HTTP/1.1" 200 1579
+"GET /static/images/icon-more.png HTTP/1.1" 200 1139
+"GET /static/images/footer03.png HTTP/1.1" 200 1912
+"GET /static/images/footer001.png HTTP/1.1" 200 1907
+"GET /static/images/footer02.png HTTP/1.1" 200 987
+"GET /static/images/footer04.png HTTP/1.1" 200 2601
+"GET /static/js/maps/swiper.jquery.js.map HTTP/1.1" 404 1697
+"GET /mine/cart/ HTTP/1.1" 302 0
+"GET /accounts/user/login/?next=/mine/cart/ HTTP/1.1" 200 3328
+"GET /static/css/jquery-weui.css HTTP/1.1" 200 67510
+"GET /static/lib/weui.min.css HTTP/1.1" 200 51383
+"GET /static/images/eamil.png HTTP/1.1" 200 1932
+"GET /static/css/style.css HTTP/1.1" 200 26336
+"GET /static/images/password.png HTTP/1.1" 200 146641
+"GET /static/lib/fastclick.js HTTP/1.1" 200 25965
+"GET /static/lib/jquery-2.1.4.js HTTP/1.1" 200 247596
+"GET /static/js/jquery-weui.js HTTP/1.1" 200 201034
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.001) SELECT VERSION(); args=None
+(0.008) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' LIMIT 1; args=('r7o9zmaapemqcynb65s2r6u9x671e71e',)
+(0.014) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('r7o9zmaapemqcynb65s2r6u9x671e71e', 'ZGZiZThkMzBkMWM3NDYxNTQzODhlMTJjYWMwODg5ZDcxNzg1NTdmZTp7InZlcmlmeV9jb2RlIjoiQlZ5UiJ9', '2020-02-10 07:32:10.718603'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', 'ZGZiZThkMzBkMWM3NDYxNTQzODhlMTJjYWMwODg5ZDcxNzg1NTdmZTp7InZlcmlmeV9jb2RlIjoiQlZ5UiJ9', '2020-02-10 07:32:10.718603')
+"GET /sys/verify/code/ HTTP/1.1" 200 2012
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:32:28.109088'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:32:28.109088')
+Forbidden (CSRF token missing or incorrect.): /accounts/user/login/
+"POST /accounts/user/login/?next=/mine/cart/ HTTP/1.1" 403 2497
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:33:38.729187'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:33:38.729187')
+Forbidden (CSRF token missing or incorrect.): /accounts/user/login/
+"POST /accounts/user/login/?next=/mine/cart/ HTTP/1.1" 403 2497
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:33:39.871133'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:33:39.871133')
+Forbidden (CSRF token missing or incorrect.): /accounts/user/login/
+"POST /accounts/user/login/?next=/mine/cart/ HTTP/1.1" 403 2497
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.003) SHOW FULL TABLES; args=None
+(0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:33:51.460060'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:33:51.460060')
+Forbidden (CSRF token missing or incorrect.): /accounts/user/login/
+"POST /accounts/user/login/?next=/mine/cart/ HTTP/1.1" 403 2497
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:33:52.401545'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:33:52.401545')
+"GET /accounts/user/login/?next=/mine/cart/ HTTP/1.1" 200 3462
+"GET /static/lib/weui.min.css HTTP/1.1" 200 51383
+"GET /static/css/jquery-weui.css HTTP/1.1" 200 67510
+"GET /static/css/style.css HTTP/1.1" 200 26336
+"GET /static/images/eamil.png HTTP/1.1" 200 1932
+"GET /static/images/password.png HTTP/1.1" 200 146641
+"GET /static/lib/fastclick.js HTTP/1.1" 200 25965
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+"GET /static/js/jquery-weui.js HTTP/1.1" 200 201034
+"GET /static/lib/jquery-2.1.4.js HTTP/1.1" 200 247596
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:33:52.505265'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:33:52.505265')
+(0.005) UPDATE `django_session` SET `session_data` = 'ZmNmZWY0MDQxNmI4NTU4ZTVkYmY0MTk5N2ZmYzU4M2I3ZWY1YzEzYjp7InZlcmlmeV9jb2RlIjoiYzdraiJ9', `expire_date` = '2020-02-10 07:33:52.518241' WHERE `django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e'; args=('ZmNmZWY0MDQxNmI4NTU4ZTVkYmY0MTk5N2ZmYzU4M2I3ZWY1YzEzYjp7InZlcmlmeV9jb2RlIjoiYzdraiJ9', '2020-02-10 07:33:52.518241', 'r7o9zmaapemqcynb65s2r6u9x671e71e')
+"GET /sys/verify/code/ HTTP/1.1" 200 1758
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.001) SELECT VERSION(); args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:33:59.497589'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:33:59.497589')
+(0.002) UPDATE `django_session` SET `session_data` = 'N2U5YTBhYWM2OTJkZDkzODJkZWYyMzYyMjRiMTI4NTIzNjk1ZjU4MDp7InZlcmlmeV9jb2RlIjoiUGRqUyJ9', `expire_date` = '2020-02-10 07:33:59.505564' WHERE `django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e'; args=('N2U5YTBhYWM2OTJkZDkzODJkZWYyMzYyMjRiMTI4NTIzNjk1ZjU4MDp7InZlcmlmeV9jb2RlIjoiUGRqUyJ9', '2020-02-10 07:33:59.505564', 'r7o9zmaapemqcynb65s2r6u9x671e71e')
+"GET /sys/verify/code/?t=1580110439491 HTTP/1.1" 200 2031
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:34:00.871884'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:34:00.871884')
+(0.000) UPDATE `django_session` SET `session_data` = 'ZjBiNjhjYzE4Njc2ZWQ1ZGI1M2NkZTUwZDI2YWM2NTZjOGRhNWQyYjp7InZlcmlmeV9jb2RlIjoiYVZNcSJ9', `expire_date` = '2020-02-10 07:34:00.881857' WHERE `django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e'; args=('ZjBiNjhjYzE4Njc2ZWQ1ZGI1M2NkZTUwZDI2YWM2NTZjOGRhNWQyYjp7InZlcmlmeV9jb2RlIjoiYVZNcSJ9', '2020-02-10 07:34:00.881857', 'r7o9zmaapemqcynb65s2r6u9x671e71e')
+"GET /sys/verify/code/?t=1580110440867 HTTP/1.1" 200 1836
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.002) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:34:02.008844'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:34:02.008844')
+(0.001) UPDATE `django_session` SET `session_data` = 'MTVkZGI4NTNjYWZjNDMzZmJlNzExOGFlMDgzZTE0MDY2ZTMxOTNkMDp7InZlcmlmeV9jb2RlIjoiVXBLQiJ9', `expire_date` = '2020-02-10 07:34:02.018815' WHERE `django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e'; args=('MTVkZGI4NTNjYWZjNDMzZmJlNzExOGFlMDgzZTE0MDY2ZTMxOTNkMDp7InZlcmlmeV9jb2RlIjoiVXBLQiJ9', '2020-02-10 07:34:02.018815', 'r7o9zmaapemqcynb65s2r6u9x671e71e')
+"GET /sys/verify/code/?t=1580110442004 HTTP/1.1" 200 1959
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e' AND `django_session`.`expire_date` > '2020-01-27 07:34:13.245786'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e', '2020-01-27 07:34:13.245786')
+(0.021) SELECT COUNT(*) AS `__count` FROM `account_user` WHERE `account_user`.`username` = 'admin'; args=('admin',)
+(0.001) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`username` = 'admin'; args=('admin',)
+(0.001) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`username` = 'admin'; args=('admin',)
+(0.001) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'afv6dl0vrbtg3wnbicraelx48r5mzi8x' LIMIT 1; args=('afv6dl0vrbtg3wnbicraelx48r5mzi8x',)
+(0.004) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('afv6dl0vrbtg3wnbicraelx48r5mzi8x', 'MTVkZGI4NTNjYWZjNDMzZmJlNzExOGFlMDgzZTE0MDY2ZTMxOTNkMDp7InZlcmlmeV9jb2RlIjoiVXBLQiJ9', '2020-02-10 07:34:13.329562'); args=('afv6dl0vrbtg3wnbicraelx48r5mzi8x', 'MTVkZGI4NTNjYWZjNDMzZmJlNzExOGFlMDgzZTE0MDY2ZTMxOTNkMDp7InZlcmlmeV9jb2RlIjoiVXBLQiJ9', '2020-02-10 07:34:13.329562')
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'r7o9zmaapemqcynb65s2r6u9x671e71e'; args=('r7o9zmaapemqcynb65s2r6u9x671e71e',)
+(0.002) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('r7o9zmaapemqcynb65s2r6u9x671e71e'); args=('r7o9zmaapemqcynb65s2r6u9x671e71e',)
+(0.002) UPDATE `account_user` SET `last_login` = '2020-01-27 07:34:13.356489' WHERE `account_user`.`id` = 2; args=('2020-01-27 07:34:13.356489', 2)
+(0.000) UPDATE `django_session` SET `session_data` = 'ZTE0Zjk4NTA4NWJiZmFkYzA2ZTEyNGViMzU5N2IzZWZmM2RlMTBlZjp7InZlcmlmeV9jb2RlIjoiVXBLQiIsIl9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MzIyMjZjMTBlYjlkMDRmZWM5ZDE3MTZmYTg1MDlhNzQxOTkwNGE2IiwidXNlcl9pZCI6Mn0=', `expire_date` = '2020-02-10 07:34:13.363470' WHERE `django_session`.`session_key` = 'afv6dl0vrbtg3wnbicraelx48r5mzi8x'; args=('ZTE0Zjk4NTA4NWJiZmFkYzA2ZTEyNGViMzU5N2IzZWZmM2RlMTBlZjp7InZlcmlmeV9jb2RlIjoiVXBLQiIsIl9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MzIyMjZjMTBlYjlkMDRmZWM5ZDE3MTZmYTg1MDlhNzQxOTkwNGE2IiwidXNlcl9pZCI6Mn0=', '2020-02-10 07:34:13.363470', 'afv6dl0vrbtg3wnbicraelx48r5mzi8x')
+"POST /accounts/user/login/?next=/mine/cart/ HTTP/1.1" 302 0
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'afv6dl0vrbtg3wnbicraelx48r5mzi8x' AND `django_session`.`expire_date` > '2020-01-27 07:34:13.373444'); args=('afv6dl0vrbtg3wnbicraelx48r5mzi8x', '2020-01-27 07:34:13.373444')
+(0.000) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`id` = 2; args=(2,)
+(0.001) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`id` = 2; args=(2,)
+(0.004) SELECT SUM(`mine_cart`.`amount`) AS `sum_amount`, SUM(`mine_cart`.`count`) AS `sum_count` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+(0.000) SELECT COUNT(*) AS `__count` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+(0.001) SELECT `mine_cart`.`id`, `mine_cart`.`user_id`, `mine_cart`.`product_id`, `mine_cart`.`order_id`, `mine_cart`.`name`, `mine_cart`.`img`, `mine_cart`.`price`, `mine_cart`.`origin_price`, `mine_cart`.`count`, `mine_cart`.`amount`, `mine_cart`.`status`, `mine_cart`.`created_at`, `mine_cart`.`updated_at` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+"GET /mine/cart/ HTTP/1.1" 200 3672
+"GET /static/lib/weui.min.css HTTP/1.1" 200 51383
+"GET /static/css/jquery-weui.css HTTP/1.1" 200 67510
+"GET /static/css/style.css HTTP/1.1" 200 26336
+"GET /static/lib/jquery-2.1.4.js HTTP/1.1" 200 247596
+"GET /static/lib/fastclick.js HTTP/1.1" 200 25965
+"GET /static/js/jquery-weui.js HTTP/1.1" 200 201034
+"GET /static/js/jquery.Spinner.js HTTP/1.1" 200 1423
+"GET /static/images/icon-back.png HTTP/1.1" 200 1538
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'afv6dl0vrbtg3wnbicraelx48r5mzi8x' AND `django_session`.`expire_date` > '2020-01-27 07:34:42.523473'); args=('afv6dl0vrbtg3wnbicraelx48r5mzi8x', '2020-01-27 07:34:42.523473')
+(0.001) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`id` = 2; args=(2,)
+(0.001) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`id` = 2; args=(2,)
+(0.000) SELECT SUM(`mine_cart`.`amount`) AS `sum_amount`, SUM(`mine_cart`.`count`) AS `sum_count` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+(0.000) SELECT COUNT(*) AS `__count` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+"GET /accounts/user/login/?next=/mine/cart/ HTTP/1.1" 200 3462
+"GET /static/lib/weui.min.css HTTP/1.1" 200 51383
+"GET /static/css/jquery-weui.css HTTP/1.1" 200 67510
+"GET /static/css/style.css HTTP/1.1" 200 26336
+"GET /static/images/eamil.png HTTP/1.1" 200 1932
+"GET /static/images/password.png HTTP/1.1" 200 146641
+"GET /static/lib/fastclick.js HTTP/1.1" 200 25965
+"GET /static/lib/jquery-2.1.4.js HTTP/1.1" 200 247596
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+"GET /static/js/jquery-weui.js HTTP/1.1" 200 201034
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'afv6dl0vrbtg3wnbicraelx48r5mzi8x' AND `django_session`.`expire_date` > '2020-01-27 07:34:42.609243'); args=('afv6dl0vrbtg3wnbicraelx48r5mzi8x', '2020-01-27 07:34:42.609243')
+(0.001) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`id` = 2; args=(2,)
+(0.002) UPDATE `django_session` SET `session_data` = 'N2EwNWUwY2I2MjM5YzMwMmZiYTU0NTU5ODE2MjEzMTkzMThkMzI3OTp7InZlcmlmeV9jb2RlIjoieXF0cCIsIl9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MzIyMjZjMTBlYjlkMDRmZWM5ZDE3MTZmYTg1MDlhNzQxOTkwNGE2IiwidXNlcl9pZCI6Mn0=', `expire_date` = '2020-02-10 07:34:42.624228' WHERE `django_session`.`session_key` = 'afv6dl0vrbtg3wnbicraelx48r5mzi8x'; args=('N2EwNWUwY2I2MjM5YzMwMmZiYTU0NTU5ODE2MjEzMTkzMThkMzI3OTp7InZlcmlmeV9jb2RlIjoieXF0cCIsIl9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MzIyMjZjMTBlYjlkMDRmZWM5ZDE3MTZmYTg1MDlhNzQxOTkwNGE2IiwidXNlcl9pZCI6Mn0=', '2020-02-10 07:34:42.624228', 'afv6dl0vrbtg3wnbicraelx48r5mzi8x')
+"GET /sys/verify/code/ HTTP/1.1" 200 1926
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.002) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'afv6dl0vrbtg3wnbicraelx48r5mzi8x' AND `django_session`.`expire_date` > '2020-01-27 07:34:45.894456'); args=('afv6dl0vrbtg3wnbicraelx48r5mzi8x', '2020-01-27 07:34:45.894456')
+(0.000) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`id` = 2; args=(2,)
+(0.000) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`id` = 2; args=(2,)
+(0.000) SELECT SUM(`mine_cart`.`amount`) AS `sum_amount`, SUM(`mine_cart`.`count`) AS `sum_count` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+(0.001) SELECT COUNT(*) AS `__count` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+(0.001) SELECT `mine_cart`.`id`, `mine_cart`.`user_id`, `mine_cart`.`product_id`, `mine_cart`.`order_id`, `mine_cart`.`name`, `mine_cart`.`img`, `mine_cart`.`price`, `mine_cart`.`origin_price`, `mine_cart`.`count`, `mine_cart`.`amount`, `mine_cart`.`status`, `mine_cart`.`created_at`, `mine_cart`.`updated_at` FROM `mine_cart` WHERE (`mine_cart`.`user_id` = 2 AND `mine_cart`.`status` = 10); args=(2, 10)
+"GET /mine/cart/ HTTP/1.1" 200 3672
+"GET /static/lib/weui.min.css HTTP/1.1" 200 51383
+"GET /static/css/jquery-weui.css HTTP/1.1" 200 67510
+"GET /static/css/style.css HTTP/1.1" 200 26336
+"GET /static/lib/fastclick.js HTTP/1.1" 200 25965
+"GET /static/js/jquery.Spinner.js HTTP/1.1" 200 1423
+"GET /static/lib/jquery-2.1.4.js HTTP/1.1" 200 247596
+"GET /static/js/jquery-weui.js HTTP/1.1" 200 201034
+"GET /static/images/icon-back.png HTTP/1.1" 200 1538
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SELECT VERSION(); args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'afv6dl0vrbtg3wnbicraelx48r5mzi8x' AND `django_session`.`expire_date` > '2020-01-27 07:34:49.332262'); args=('afv6dl0vrbtg3wnbicraelx48r5mzi8x', '2020-01-27 07:34:49.332262')
+(0.001) SELECT `account_user`.`id`, `account_user`.`password`, `account_user`.`last_login`, `account_user`.`is_superuser`, `account_user`.`username`, `account_user`.`first_name`, `account_user`.`last_name`, `account_user`.`email`, `account_user`.`is_staff`, `account_user`.`is_active`, `account_user`.`date_joined`, `account_user`.`nickname`, `account_user`.`avatar`, `account_user`.`integral`, `account_user`.`level` FROM `account_user` WHERE `account_user`.`id` = 2; args=(2,)
+Forbidden (CSRF token missing or incorrect.): /mine/cart/
+"POST /mine/cart/ HTTP/1.1" 403 2497

@@ -97,8 +97,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_mall',
-        'USER': 'root',
-        'PASSWORD': '123qwe',
+        'USER': '数据库用户',
+        'PASSWORD': '数据库密码',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }

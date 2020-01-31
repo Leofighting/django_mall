@@ -26,7 +26,9 @@ DATABASES = {
 }
 ```
 
-2.在项目主目录文件夹，进入命令终端，使用一下命令运行文件：
+2.导入数据库数据：主目录下的 django_mall.sql 文件
+
+3.在项目主目录文件夹，进入命令终端，使用一下命令运行文件：
 ```python
 python manage.py runserver
 ```

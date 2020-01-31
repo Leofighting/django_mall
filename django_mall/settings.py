@@ -90,17 +90,13 @@ WSGI_APPLICATION = 'django_mall.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_mall',
-        'USER': '数据库用户',
+        'NAME': '数据库名',
+        'USER': '用户名',
         'PASSWORD': '数据库密码',
         'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PORT': '端口号（默认为3306）',
     }
 }
 

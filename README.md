@@ -10,11 +10,26 @@
 - 后端：Python-3.7，Django-1.11
 - 数据处理：MySQL
 
+## 配置及运行
 
+1.配置MySQL数据库信息：django_mall/settings.py:
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '数据库名',
+        'USER': '用户名',
+        'PASSWORD': '数据库密码',
+        'HOST': '127.0.0.1',
+        'PORT': '端口号（默认为3306）',
+    }
+}
+```
 
-You could switch to source code mode temporary from menu bar, footer bar or short cut key (`ctrl+/`). But we only provide very basic support for source code mode and won't recommend users to do so.
-
-
+2.在项目主目录文件夹，进入命令终端，使用一下命令运行文件：
+```python
+python manage.py runserver
+```
 
 ## 整体框架
 
@@ -76,4 +91,4 @@ pip=19.3.1
 
 ## About
 
-项目来源：慕课网
+学习来源：慕课网
